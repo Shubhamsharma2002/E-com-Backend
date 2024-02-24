@@ -1,0 +1,32 @@
+{"level":"info","message":"/api/cartItems - {}","service":"request-logging"}
+{"level":"info","message":"/api/cartItems - {}","service":"request-logging"}
+{"level":"info","message":"/api/cartItems - {}","service":"request-logging"}
+{"level":"info","message":"/api/products/rate?userID=2&rating=4&productID=10 - {}","service":"request-logging"}
+{"level":"info","message":"/api/products/rate?userID=2&rating=4&productID=10 - {}","service":"request-logging"}
+{"level":"info","message":"/api/products/rate?userID=2&rating=4&productID=10 - {}","service":"request-logging"}
+{"level":"info","message":"/api/products/rate?productID=10&userID=2&rating=4 - {}","service":"request-logging"}
+{"level":"info","message":"/api/products/rate?productID=10&userID=2&rating=4 - {}","service":"request-logging"}
+{"level":"info","message":"/api/products/rate?productID=10&userID=2&rating=4 - {}","service":"request-logging"}
+{"level":"info","message":"/api/products/rate?productID=1&userID=2&rating=4 - {}","service":"request-logging"}
+{"level":"info","message":"/api/products/rate?productID=1&userID=2&rating=4 - {}","service":"request-logging"}
+{"level":"info","message":"/api/products/rate?productID=1&userID=2&rating=4 - {}","service":"request-logging"}
+{"level":"info","message":"/api/products/rate?productID=1&userID=2&rating=4 - {}","service":"request-logging"}
+{"level":"info","message":"/api/products/rate?productID=1&userID=2&rating=4 - {}","service":"request-logging"}
+{"level":"info","message":"/api/products/rate?productID=1&userID=2&rating=4 - {}","service":"request-logging"}
+{"level":"info","message":"/api/products/rate?productID=1&userID=2&rating=4 - {}","service":"request-logging"}
+{"level":"info","message":"/api/products/rate?productID=1&userID=2&rating=4 - {}","service":"request-logging"}
+{"level":"info","message":"/api/products/rate?productID=1&userID=2&rating=4 - {}","service":"request-logging"}
+{"level":"info","message":"/api/products/rate?productID=1&userID=2&rating=4 - {}","service":"request-logging"}
+{"level":"info","message":"/api/products/rate?productID=1&userID=62&rating=4 - {}","service":"request-logging"}
+{"level":"info","message":"/api/users/signup - {\"email\":\"customer@ecom.com\",\"password\":\"Password1\",\"name\":\"hue hue\",\"type\":\"seller\"}","service":"request-logging"}
+{"level":"info","message":"/api/users/signup - {\"email\":\"shubha@ecom.com\",\"password\":\"1234\",\"name\":\"chue mue\",\"type\":\"seller\"}","service":"request-logging"}
+{"level":"info","message":"/api/users/signup - {\"email\":\"shubha@ecom.com\",\"password\":\"1234\",\"name\":\"1ue mue\",\"type\":\"seller\"}","service":"request-logging"}
+{"level":"info","message":"/api/users/signup - {\"email\":\"shubha@ecom.com\",\"password\":\"1234\",\"name\":\"1ue mjgye\",\"type\":\"seller\"}","service":"request-logging"}
+{"level":"info","message":"/api/users/signup - {\"email\":\"shubha@ecom.com\",\"password\":\"1234\",\"name\":\"1ue mjgye\",\"type\":\"seller\"}","service":"request-logging"}
+{"level":"info","message":"/api/users/signup - {\"email\":\"shubha@ecom.com\",\"password\":\"1234\",\"name\":\"1ue mjgye\",\"type\":\"seller\"}","service":"request-logging"}
+{"level":"info","message":"/api/users/signup - {\"email\":\"shubha@ecom.com\",\"password\":\"1234\",\"name\":\"1ue mjgye\",\"type\":\"seller\"}","service":"request-logging"}
+{"level":"info","message":"/api/users/signup - {\"email\":\"shubha@ecom.com\",\"password\":\"1234\",\"name\":\"chue mue\",\"type\":\"seller\"}","service":"request-logging"}
+{"level":"info","message":"/api/users/signup - {\"email\":\"shubha@ecom.com\",\"password\":\"1234\",\"name\":\"chue mue\",\"type\":\"seller\"}","service":"request-logging"}
+{"level":"info","message":"/api/users/signup - {\"email\":\"shubha@ecom.com\",\"password\":\"123467\",\"name\":\"ka ho\",\"type\":\"seller\"}","service":"request-logging"}
+{"level":"info","message":"/api/users/signup - {\"email\":\"shubha@ecom.com\",\"password\":\"hlw\",\"name\":\"hkw\",\"type\":\"seller\"}","service":"request-logging"}
+{"level":"info","message":"/api/users/signup - {\"email\":\"sh@ecom.com\",\"password\":\"hlw\",\"name\":\"test 1\",\"type\":\"seller 1\"}","service":"request-logging"}

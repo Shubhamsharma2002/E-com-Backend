@@ -1,0 +1,12 @@
+ProductController 
+Get Products
+Add a product
+get one Products
+rate Products
+
+
+
+user Controller 
+ 
+ signUp - Email name password typeofuserr(customer, seller);
+ signin - (email, password)
