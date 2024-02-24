@@ -1,8 +1,9 @@
+import './env.js';
 import expres from 'express';
 import  Swagger  from 'swagger-ui-express';
 import  bodyparser from 'body-parser';
 // this file is used in hashing of password
-import bcrypt from 'bcrypt';
+
 import  ProductRouter from './src/features/product/product-routes.js';
 import cartRouter from './src/features/cart/cartRoutes.js';
 import UserRouter from './src/features/user/userRoutes.js';
@@ -13,6 +14,8 @@ import loggerMiddleware from './src/middleware/logger-middleware.js';
 import { ApplicationError } from './src/errorhandler/application-error-handler.js';
 import {connectToMongodb} from './src/config/mongodb.js';
 const server = expres();
+
+
 server.use(bodyparser.json());
 server.use('/api-docs', Swagger.serve, Swagger.setup(apiDocs))
 server.use(loggerMiddleware);
