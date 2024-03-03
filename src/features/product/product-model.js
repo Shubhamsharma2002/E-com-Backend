@@ -1,8 +1,8 @@
 import { ApplicationError } from "../../errorhandler/application-error-handler.js";
 import UserModel from "../user/userModel.js"
 export default class ProductModel {
-    constructor(id, name, desc, imgUrl , category, price, size){
-        this.id = id;
+    constructor( name, desc, imgUrl , category, price, size,id){
+        this._id = id;
         this.name = name;
         this.desc = desc;
         this.imgUrl = imgUrl;
@@ -11,9 +11,9 @@ export default class ProductModel {
         this.size = size;
     }
     static add(product){
-      product.id= products.length+ 1;
-      products.push(product);
-      return product;
+      // product.id= products.length+ 1;
+      // products.push(product);
+      // return product;
     }
 
     static get(id){
