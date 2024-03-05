@@ -45,13 +45,14 @@ export default class UserController {
     } = req.body;
 
     //  used to hashed the password
-    // const hashPassword = await bcrypt.hash(password, 12)
+    
 
 try {
+  const hashPassword = await bcrypt.hash(password, 12)
   const user = new UserModel(
     name,
     email,
-    password,
+    hashPassword,
     type
   );
 

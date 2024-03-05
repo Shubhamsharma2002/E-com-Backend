@@ -207,3 +207,14 @@
 {"level":"info","message":"/api/users/signup - {\"name\":\"hlw\",\"email\":\"s55f77ff5@gmail.com\",\"password\":\"777@7\"}","service":"request-logging"}
 {"level":"info","message":"/api/users/signup - {\"name\":\"hlw\",\"email\":\"s55f77ff5@gmail.com\",\"password\":\"777@7\"}","service":"request-logging"}
 {"level":"info","message":"/api/users/signup - {\"name\":\"hlw\",\"email\":\"s55f77ff5@gmail.com\",\"password\":\"7777777777@7\"}","service":"request-logging"}
+{"level":"info","message":"/api/products/rate?productID=65dcd70c64fc693fc3f0b09b&rating=5 - {\"name\":\"hlw\",\"email\":\"s55f77ff5@gmail.com\",\"password\":\"7777777777@7\"}","service":"request-logging"}
+{"level":"info","message":"/api/users/signup - {\"name\":\"hlw\",\"email\":\"s55f77ff5@gmail.com\",\"password\":\"7777777777@7\"}","service":"request-logging"}
+{"level":"info","message":"/api/users/signup - {\"name\":\"hlw\",\"email\":\"s5s5f77ff5@gmail.com\",\"password\":\"7777777777@7\"}","service":"request-logging"}
+{"level":"info","message":"/api/users/signup - {\"name\":\"hlw\",\"email\":\"s5s5f77ff5@gmail.com\",\"password\":\"ss77777@7\"}","service":"request-logging"}
+{"level":"info","message":"/api/users/signup - {\"name\":\"hlw\",\"email\":\"s5s@gmail.com\",\"password\":\"shubham@1234\"}","service":"request-logging"}
+{"level":"info","message":"/api/users/signup - {\"name\":\"hlw\",\"email\":\"s5s@gmail.com\",\"password\":\"shubham@1234\"}","service":"request-logging"}
+{"level":"info","message":"/api/products/rate?productID=65dcdb7bd6f85aefd98ac937&rating=5 - {}","service":"request-logging"}
+{"level":"info","message":"/api/products/rate?productID=65dba2564a485e7cd5feb17b&rating=5 - {}","service":"request-logging"}
+{"level":"info","message":"/api/products/rate?productID=65dcdb7bd6f85aefd98ac937&rating=5 - {}","service":"request-logging"}
+{"level":"info","message":"/api/products/rate - {\"productID\":\"65dcdb7bd6f85aefd98ac937\",\"rating\":\"89\"}","service":"request-logging"}
+{"level":"info","message":"/api/products/rate - {\"productID\":\"65dcdb7bd6f85aefd98ac937\",\"rating\":\"9\"}","service":"request-logging"}

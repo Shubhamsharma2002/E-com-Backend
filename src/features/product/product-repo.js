@@ -1,7 +1,11 @@
 import {ObjectId} from 'mongodb';
 import { getDB } from "../../config/mongodb.js";
 import { ApplicationError } from "../../errorhandler/application-error-handler.js";
-
+import mongoose from 'mongoose';
+import { productSchema } from './productSchema.js';
+import { reviewSchema } from './review-schema.js';
+ const productModel = mongoose.model('Product', productSchema);
+ const reviewModel = mongoose.model('Review', reviewSchema);
 class productRepo{
           async add( newProduct){
                     try {
@@ -55,28 +59,24 @@ class productRepo{
           }
         async  rate(userID, productID, rating){
             try{
-                const db = getDB();
-                const collection = db.collection("products");
-
-                const product = await collection.findOne({_id:new ObjectId(productID)});
-
-                const userRating = product?.ratings?.find(r => r.userID == userID);
-                if(userRating){
-                    await collection.updateOne({
-                        _id: new ObjectId(productID),"rating.userID":new ObjectId(userID)
-                    },{
-                        $set:{
-                            "rating.$.rating":rating
-                        }
-                    })
-                }else{
-                    await  collection.updateOne({
-                        _id:new ObjectId(productID)
-                    },{
-                        $push: {ratings: {userID:new ObjectId(userID), rating}}
-                    })
+                
+                const productToupdate = await productModel.findById(productID);
+                if(!productToupdate){
+                      throw new Error("product not found");
                 }
-             
+
+                const userReview = await reviewModel.findOne({product : new ObjectId(productID), user:new ObjectId(userID)})
+                 if(userReview){
+                    userReview.rating= rating;
+                    await userReview.save();
+                 }else{
+                    const newreview = new reviewModel({
+                        product: new ObjectId(productID),
+                        user: new ObjectId(userID),
+                        rating:rating
+                    })
+                    newreview.save();
+                 }
     
             }catch(err){
                 console.log(err);
