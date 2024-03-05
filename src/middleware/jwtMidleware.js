@@ -13,7 +13,7 @@ const jwtAuth = (req, res, next) => {
             token,
             "vuCr6JSa0Uq0km4MLReIoPDvNvCNMeTV"
         );
-        req.userId = payload.userId;
+        req.userID = payload.userID;
     }catch(err){
         return res.status(401).send('Unauthorized')
     }

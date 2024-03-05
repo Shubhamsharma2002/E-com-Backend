@@ -13,6 +13,8 @@ import apiDocs from './swagger.json' assert{type:'json'};
 import loggerMiddleware from './src/middleware/logger-middleware.js';
 import { ApplicationError } from './src/errorhandler/application-error-handler.js';
 import {connectToMongodb} from './src/config/mongodb.js';
+import { moongooseconnection } from './src/config/mongose.js';
+import mongoose from 'mongoose';
 const server = expres();
 
 
@@ -29,8 +31,11 @@ server.use('/api/users', UserRouter)
 // error handler midlware alway use this midle ware at the last
 server.use((err, req, res,next) =>{
     console.log(err);
+if(err instanceof mongoose.Error.ValidationError){
+   return  res.status(400).send(err.message);
+}
     if(err instanceof ApplicationError){
-        res.status(err.code).send(err.message);
+       return res.status(err.code).send(err.message);
     }
     res.status(500).send('Something went wrong pls try later');
 })
@@ -39,5 +44,6 @@ server.use((req, res) =>{
 })
 server.listen(3000, (req, res) =>{
     console.log("happly fired the server on port  no 3000 -:)");
-    connectToMongodb();
+    // connectToMongodb();
+    moongooseconnection();
 })

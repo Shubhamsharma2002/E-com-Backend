@@ -1,5 +1,5 @@
 
-import Userrepo from './user-repo.js';
+import Userrepo from './user-mrepo.js';
 import UserModel from './userModel.js';
 import jwt  from 'jsonwebtoken';
 import bcrypt from 'bcrypt'
@@ -8,7 +8,35 @@ export default class UserController {
   constructor(){
     this.uuserRepo = new Userrepo();
   }
- async signUp(req, res) {
+  async resetPassword (req, res,next){
+    const {newPassword} = req.body;
+    const hashPassword = await bcrypt.hash(newPassword, 12) ;
+    const userID = req.userID;
+    try {
+        await this.uuserRepo.resetPassword(userID,hashPassword);
+              res.status(200).send("password is updated");
+    } catch (err) {
+      console.log(err);
+      console.log("Passing error to midleware");
+      next(err);
+    }
+  }
+
+
+  // async resetPassword(req, res, next){
+  //   const {newPassword} = req.body;
+  //   const hashedPassword = await bcrypt.hash(newPassword, 12)
+  //   const userID = req.userID;
+  //   try{
+  //     await this.uuserRepo.resetPassword(userID, hashedPassword)
+  //     res.status(200).send("Password is updated");
+  //   }catch(err){
+  //     console.log(err);
+  //     console.log("Passing error to middleware");
+  //     next(err);
+  //   }
+  // }
+ async signUp(req, res, next) {
     const {
       name,
       email,
@@ -17,18 +45,22 @@ export default class UserController {
     } = req.body;
 
     //  used to hashed the password
-    const hashPassword = await bcrypt.hash(password, 12)
+    // const hashPassword = await bcrypt.hash(password, 12)
 
+try {
+  const user = new UserModel(
+    name,
+    email,
+    password,
+    type
+  );
 
-    const user = new UserModel(
-      name,
-      email,
-      hashPassword,
-      type
-    );
-
-    await this.uuserRepo.SignUp(user)
-    res.status(201).send(user);
+  await this.uuserRepo.SignUp(user)
+   res.status(201).send(user);
+} catch (err) {
+    next(err);
+}
+    
   }
 
  async signIn(req, res) {
