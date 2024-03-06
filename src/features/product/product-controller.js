@@ -25,11 +25,11 @@ export default class ProductController{
         try{
 
         
-       const {name, price, size} = req.body;
-       const newProduct = new ProductModel(name,null,req.file.filename,null,parseFloat(price),size.split(','));
+       const {name, price, size, categories} = req.body;
+       const newProduct = new ProductModel(name,null,req?.file?.filename,categories,parseFloat(price),size?.split(','));
     //    const newProduct = {
     //     name,
-    //     price:parseFloat(price),
+    //     price:parseFloat(price),categories
     //     sizes:sizes.split(','),
     //     imgUrl:req.file.filename,
     //    };

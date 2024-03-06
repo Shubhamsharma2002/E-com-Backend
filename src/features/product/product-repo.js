@@ -4,15 +4,22 @@ import { ApplicationError } from "../../errorhandler/application-error-handler.j
 import mongoose from 'mongoose';
 import { productSchema } from './productSchema.js';
 import { reviewSchema } from './review-schema.js';
+import { categorySchema } from './categorySchema.js';
  const productModel = mongoose.model('Product', productSchema);
  const reviewModel = mongoose.model('Review', reviewSchema);
+ const CategoryModel = mongoose.model('Category', categorySchema);
 class productRepo{
-          async add( newProduct){
+          async add( productdata){
                     try {
-                          const db = getDB();
-                          const collection = db.collection("products");
-                          await collection.insertOne(newProduct);
-                          return newProduct;
+                          const newproduct = new productModel(productdata);
+                          productdata.categories=productdata.category.split(',').map(e => e.trim());
+                          console.log(productdata)
+                          const savedproduct = await newproduct.save();
+
+                          await CategoryModel.updateMany(
+                            {_id:{$in:productdata.categories}},
+                            {$push:{products:new ObjectId(savedproduct._id)}}
+                          )
                     } catch (err) {
                         console.log(err);
                         throw new ApplicationError("some went wrong guys ", 500)

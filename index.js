@@ -15,6 +15,7 @@ import { ApplicationError } from './src/errorhandler/application-error-handler.j
 import {connectToMongodb} from './src/config/mongodb.js';
 import { moongooseconnection } from './src/config/mongose.js';
 import mongoose from 'mongoose';
+import likeRouter from './src/features/like/likeRouter.js';
 const server = expres();
 
 
@@ -28,6 +29,7 @@ server.get('/', (req, res) =>{
 server.use('/api/products',jwtAuth, ProductRouter)
 server.use('/api/cartItems',jwtAuth, cartRouter)
 server.use('/api/users', UserRouter)
+server.use('/api/likes', jwtAuth, likeRouter)
 // error handler midlware alway use this midle ware at the last
 server.use((err, req, res,next) =>{
     console.log(err);

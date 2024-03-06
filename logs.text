@@ -218,3 +218,18 @@
 {"level":"info","message":"/api/products/rate?productID=65dcdb7bd6f85aefd98ac937&rating=5 - {}","service":"request-logging"}
 {"level":"info","message":"/api/products/rate - {\"productID\":\"65dcdb7bd6f85aefd98ac937\",\"rating\":\"89\"}","service":"request-logging"}
 {"level":"info","message":"/api/products/rate - {\"productID\":\"65dcdb7bd6f85aefd98ac937\",\"rating\":\"9\"}","service":"request-logging"}
+{"level":"info","message":"/api/products/rate - {\"name\":\"Amazon kindle\",\"price\":15000,\"description\":\"e book reader\",\"categories\":\"65e8171a0bb9f36a96fa3438,65e8171a0bb9f36a96fa3439\"}","service":"request-logging"}
+{"level":"info","message":"/api/products - {\"name\":\"Amazon kindle\",\"price\":15000,\"description\":\"e book reader\",\"categories\":\"65e8171a0bb9f36a96fa3438,65e8171a0bb9f36a96fa3439\"}","service":"request-logging"}
+{"level":"info","message":"/api/products - {\"name\":\"Amazon kindle\",\"price\":15000,\"description\":\"e book reader\",\"categories\":\"65e8171a0bb9f36a96fa3438,65e8171a0bb9f36a96fa3439\"}","service":"request-logging"}
+{"level":"info","message":"/api/products - {\"name\":\"Amazon kindle\",\"price\":15000,\"description\":\"e book reader\",\"categories\":\"65e8171a0bb9f36a96fa3438,65e8171a0bb9f36a96fa3439\"}","service":"request-logging"}
+{"level":"info","message":"/api/products - {\"name\":\"Amazon \",\"price\":1000,\"description\":\"e book reader\",\"categories\":\"65e8171a0bb9f36a96fa3438,65e8171a0bb9f36a96fa3439\"}","service":"request-logging"}
+{"level":"info","message":"/api/products - {\"name\":\"Amazon lll \",\"price\":1000,\"description\":\"e book reader\",\"categories\":\"65e8171a0bb9f36a96fa3438,65e8171a0bb9f36a96fa3439\"}","service":"request-logging"}
+{"level":"info","message":"/api/products - {\"name\":\"Amazon ll \",\"price\":1000,\"description\":\"e book reader\",\"categories\":\"65e8171a0bb9f36a96fa3438,65e8171a0bb9f36a96fa3439\"}","service":"request-logging"}
+{"level":"info","message":"/api/products - {\"name\":\"Amazon l0l \",\"price\":1000,\"description\":\"e book reader\",\"categories\":\"65e8171a0bb9f36a96fa3438,65e8171a0bb9f36a96fa3439\"}","service":"request-logging"}
+{"level":"info","message":"/api/like - {\"type\":\"Product\",\"id\":\"65e86922e00978df896396d9\"}","service":"request-logging"}
+{"level":"info","message":"/api/likes - {\"type\":\"Product\",\"id\":\"65e86922e00978df896396d9\"}","service":"request-logging"}
+{"level":"info","message":"/api/likes - {\"type\":\"Product\",\"id\":\"65e86922e00978df896396d9\"}","service":"request-logging"}
+{"level":"info","message":"/api/likes - {\"type\":\"Product\",\"id\":\"65e86922e00978df896396d9\"}","service":"request-logging"}
+{"level":"info","message":"/api/likes?id=65e86922e00978df896396d9&type=Product - {\"type\":\"Product\",\"id\":\"65e86922e00978df896396d9\"}","service":"request-logging"}
+{"level":"info","message":"/api/likes?id=65e86922e00978df896396d9&type=Product - {\"type\":\"Product\",\"id\":\"65e86922e00978df896396d9\"}","service":"request-logging"}
+{"level":"info","message":"/api/likes - {\"type\":\"Product\",\"id\":\"65e86922e00978df896396d9\"}","service":"request-logging"}
